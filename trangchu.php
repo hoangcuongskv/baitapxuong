@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initical-scale=1.0" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="jquery.scrollupformenu.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 <title>Khoa CNTT - Trường đại học sư phạm ky thuât</title>
 </head>
 <style>
@@ -12,16 +13,16 @@
 * { font-family:sans-serif;}
 /* Body site*/
 #Body {
-	width:100%;
+	width:90%;
 	margin:auto;
 	margin-top:80px;
-	background: linear-gradient(#abbaab,#ffffff);
+	background-image: linear-gradient(to bottom, #deebf2, #ddeef0, #e0f0ec, #e7f2e8, #f0f2e5);
 }
 /* Menu mẹ*/
 #MenuTop {
 	width:100%;
 	height:80px;
-	background:linear-gradient(#232526,#414345);
+	background-image: linear-gradient(to bottom, #4a5155, #484d51, #464a4d, #434649, #414345);
 	opacity:0.8;
 	margin:auto;
 	position:fixed;
@@ -34,12 +35,12 @@
 }
 #Menu ul { list-style-type:none; margin:0; text-align:center; padding:0; }
 #Menu ul li { display:inline-table; width:16%; height:80px; line-height:80px; left: 0px; position: relative;}
-#Menu ul li a { display:block; color: #e9d362; text-decoration:none;}
+#Menu ul li a { display:block; color: #e9d362; text-decoration:none; border-left: 1px solid rgba(0,0,0,.3)}
 #Menu ul li a:hover { color:#ffffff; opacity: 0.8; display: block;}
 #Menu {width: 70%; height: 80px; float: right;}
 #Menu ul li > .sub-menu
 {
-	background:linear-gradient(#232526,#414345);;
+	background-image: linear-gradient(to bottom, #4a5155, #484d51, #464a4d, #434649, #414345);
 	display: none;
 	position: absolute;	
 }
@@ -51,7 +52,8 @@
 	height: 40px;
 }
 .sub-menu li a {
-	width: 200px
+	width: 200px;
+	background-image: linear-gradient(to bottom, #4a5155, #484d51, #464a4d, #434649, #414345);
 }
 .sub-menu li a:hover {
 	background: linear-gradient(#0f2027,#2c5364);
@@ -59,6 +61,32 @@
 /* Logo trang web*/
 #logo {width: 30%; height: 80px; float: left;}
 }
+/* Slide */
+#Slide {width: 100%; height: 20px; background: black; float: left;}
+/* Content */
+#Content {width: 80%; background: blue; float: left;}
+.TitleContent { 
+	width: 99.7%; 
+	height: 40px; 
+	border: 1px solid rgba(0,0,0,1);  
+	background-image:linear-gradient(to right bottom,#8c98c2,#779ec1,#68a2ba,#64a5ae, #6ca69f);
+	display: grid;
+	grid-template-columns: 6% 94%;
+	align-items: center;
+	margin: auto;
+}
+.TitleContent a {
+	list-style-type: none;
+	text-decoration: none;
+	font-size: 20px;
+	color: black;
+	font-family: Bookman;
+}
+.TitleContent a:hover {
+	text-decoration: underline;
+}
+/* SideBar */
+#Sidebar {width: 20%; height: 20px; background: red; float: left;}
 </style>
 <script language="javascript">
     $(function(){
@@ -119,38 +147,25 @@
 	</div>
 </div>
 <div id="Body">
-<button id="BtnTest">Thử xem nào</button>
-<p>AAAA1</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
-<p>AAAA</p>
+	<div id="Slide"></div>
+	<div id="Content">
+		<div class="TitleContent">
+			<span><img src="images/tintucicon.png"></i></span>
+			<span><a href="">Tin tức</a></span>
+		</div>
+		a
+		<div class="TitleContent">
+			<span><img src="images/thongbaoicon.png"></i></span>
+			<span><a href="">Thông báo</a></span>
+		</div>
+		a
+		<div class="TitleContent">
+			<span><img src="images/tuyendungicon.png"></i></span>
+			<span><a href="">Tuyển sinh</a> </span>
+		</div>
+	</div>
+	<div id="Sidebar"></div>
 </div>
-<p>Scrolled <span>0</span> times.</p>	
+<div id="Footer"></div>
 </body>
 </html>
