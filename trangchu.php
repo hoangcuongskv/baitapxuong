@@ -3,109 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initical-scale=1.0" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="jquery.scrollupformenu.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<!--Đây là đoạn nhúng jquery --> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Đây là đoạn nhúng FontAwesome-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<!--Đây là đoạn nhúng file js cho Slide-->			
+	<script type="text/javascript" src="js/slider.js"></script>
+	<!-- Đây là đoạn nhúng css cho site-->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />	
 <title>Khoa CNTT - Trường đại học sư phạm ky thuât</title>
 </head>
-<style>
-@media screen and (min-width: 768px) {
-* { font-family:sans-serif;}
-/* Body site*/
-#Body {
-	width:90%;
-	margin:auto;
-	margin-top:80px;
-	background: black;
-}
-/* Menu mẹ*/
-#MenuTop {
-	width:100%;
-	height:80px;
-	background-image: linear-gradient(to bottom, #4a5155, #484d51, #464a4d, #434649, #414345);
-	opacity:0.8;
-	margin:auto;
-	position:fixed;
-	top:0;
-	left:0;
-	box-shadow: 5px #666;
-	-moz-box-shadow: 5px 5px 5px #666;
-	-webkit-box-shadow: 5px 5px 5px #666;
-	z-index:500;
-}
-#Menu ul { list-style-type:none; margin:0; text-align:center; padding:0; }
-#Menu ul li { display:inline-table; width:16%; height:80px; line-height:80px; left: 0px; position: relative;}
-#Menu ul li a { display:block; color: #e9d362; text-decoration:none; border-left: 1px solid rgba(0,0,0,.3)}
-#Menu ul li a:hover { color:#ffffff; opacity: 0.8; display: block;}
-#Menu {width: 70%; height: 80px; float: right;}
-#Menu ul li > .sub-menu
-{
-	background-image: linear-gradient(to bottom, #4a5155, #484d51, #464a4d, #434649, #414345);
-	display: none;
-	position: absolute;	
-}
-#Menu ul li:hover > .sub-menu{
-	background: #000000;
-	display: block;
-}
-.sub-menu li {
-	height: 40px;
-}
-.sub-menu li a {
-	width: 200px;
-	background-image: linear-gradient(to bottom, #4a5155, #484d51, #464a4d, #434649, #414345);
-}
-.sub-menu li a:hover {
-	background: linear-gradient(#0f2027,#2c5364);
-}
-/* Logo trang web*/
-#logo {width: 30%; height: 80px; float: left;}
-}
-/* Slide */
-#Slide {width: 100%; height: 20px; background: black; float: left;}
-/* Content */
-#Content {width: 80%; float: left;}
-.TitleContent { 
-	width: 99.8%; 
-	height: 40px; 
-	border-bottom: 1px solid rgba(0,0,0,.2);
-	display: grid;
-	grid-template-columns: 15% 85%;
-	align-items: center;
-	margin: auto;
-	position: relative;
-	overflow: hidden;
-	opacity: 0.9;
-}
-.TitleContent a {
-	list-style-type: none;
-	text-decoration: none;
-	font-size: 20px;
-	color: #753157;
-	font-family: Bookman;
-}
-.TitleContent a:hover {
-
-}
-.TitleContent:before {
-	content: "";
-	position: absolute;
-	width:200px;
-	height: 100%;
-	background: rgba(0,0,0,.1);
-	transform: skew(35deg);
-	left: -20px;
-}
-.TitleContent span {
-	z-index: 10;
-}
-.TitleContent label {
-	margin: auto;
-	z-index: 10;
-}
-/* SideBar */
-#Sidebar {width: 20%; height: 20px; background: red; float: left;}
-</style>
 <script language="javascript">
     $(function(){
       //Keep track of last scroll
@@ -164,22 +71,63 @@
 	</div>
 </div>
 <div id="Body">
-	<div id="Slide"></div>
+	<div id="Slider">
+			<img class="slide" src="./images/slide1.jpg" stt="0">
+			<img class="slide" src="./images/slide2.jpg" stt="1" style="display:none;">
+			<img class="slide" src="./images/slide3.jpg" stt="2" style="display:none;">
+			<img class="slide" src="./images/slide4.jpg" stt="3" style="display:none;">
+			<a href="#" id="prev"><img src="./images/prev.png" width="64"height="64"></a>
+			<a href="#" id="next"><img src="./images/next.png" width="64"height="64"></a>
+		</div>
 	<div id="Content">
 		<div class="TitleContent">
-			<label><a href="">Tin tức</a></label>
+			<span><a href="">Tin tức</a></span>
+		</div>
+		<div class="Item-content">
+			<div class="Item-content-left">
+				<span class="Item-content-left-top"><img src="images/npt.jpg"></span>
+				<span class="Item-content-left-mid">
+					<a href="">Tổng bí thư Nguyễn Phú Trọng trong ngày đắc cử Chủ tịch nước</a>
+				</span>
+				<span class="Item-content-left-bot">
+					<p>Chiều 23/10, những tràng pháo tay, hoa tươi và những nụ cười gửi gắm kỳ vọng khi Tổng bí thư Nguyễn Phú Trọng được bầu làm Chủ tịch nước.</p>
+				</span>
+			</div>
+			<div class="Item-content-right">
+				<span class="Item-content-right-top"></span>
+				<span class="Item-content-right-mid"></span>
+				<span class="Item-content-right-bot"></span>
+			</div>
+		</div>
+		<div class="TitleContent">
+			<span><a href="">Thông báo</a></span>
 		</div>
 		<div class="Item-content">a</div>
 		<div class="TitleContent">
-			<label><a href="">Thông báo</a></label>
-		</div>
-		<div class="Item-content">a</div>
-		<div class="TitleContent">
-			<label><a href="">Tuyển sinh</a></label>
+			<span><a href="">Tuyển sinh</a></span>
 		</div>
 		<div class="Item-content">a</div>
 	</div>
-	<div id="Sidebar"></div>
+	<div id="Sidebar">
+		<div class="Title-Sidebar"><label><a href="">Tin tức mới nhất</a></label></div>
+		<div class="Content-Sidebar">
+			<div class="Big-Content-Sidebar">
+				<span class="img"><a href=""><img src="images/can-ho-hang-sang-vietnamnet-180x101.jpg"></a></span>
+				<span class="left">
+					<a href="">
+					Căn hộ siêu sang ì ạch thoát hàng, đại gia ôm tiền rời Hà Nội?
+					</a>
+				</span>
+			</div>
+			<div class="Small-Content-Sidebar">
+				<span>
+					<a href="">
+					Dân chơi Sài Gòn đốt tiền, ùn ùn kéo nhau lên nóc nhà !
+					</a>
+				</span>
+			</div>
+		</div>
+	</div>
 </div>
 <div id="Footer"></div>
 </body>
