@@ -34,6 +34,14 @@
       });
     });
 </script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <body>
  <div id="MenuTop">
   	<div id="logo"><a href="trangchu.php"><img style="height: 80px; width: 100%;" src="images/LogoMakr_3vbyPt.png"/></a></div>
@@ -94,19 +102,76 @@
 				</span>
 			</div>
 			<div class="Item-content-right">
-				<span class="Item-content-right-top"></span>
-				<span class="Item-content-right-mid"></span>
-				<span class="Item-content-right-bot"></span>
+				<span class="Item-content-right-top">
+					<span><img src="images/bai1.jpg"></span>
+					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+				</span>
+				<span class="Item-content-right-mid">
+					<span><img src="images/bai2.jpg"></span>
+					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+				</span>
+				<span class="Item-content-right-bot">
+					<span><img src="images/bai3.jpg"></span>
+					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+				</span>
 			</div>
 		</div>
 		<div class="TitleContent">
 			<span><a href="">Thông báo</a></span>
 		</div>
-		<div class="Item-content">a</div>
+		<div class="Item-content">
+			<div class="Item-content-left">
+				<span class="Item-content-left-top"><img src="images/npt.jpg"></span>
+				<span class="Item-content-left-mid">
+					<a href="">Tổng bí thư Nguyễn Phú Trọng trong ngày đắc cử Chủ tịch nước</a>
+				</span>
+				<span class="Item-content-left-bot">
+					<p>Chiều 23/10, những tràng pháo tay, hoa tươi và những nụ cười gửi gắm kỳ vọng khi Tổng bí thư Nguyễn Phú Trọng được bầu làm Chủ tịch nước.</p>
+				</span>
+			</div>
+			<div class="Item-content-right">
+				<span class="Item-content-right-top">
+					<span><img src="images/bai1.jpg"></span>
+					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+				</span>
+				<span class="Item-content-right-mid">
+					<span><img src="images/bai2.jpg"></span>
+					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+				</span>
+				<span class="Item-content-right-bot">
+					<span><img src="images/bai3.jpg"></span>
+					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+				</span>
+			</div>
+		</div>
 		<div class="TitleContent">
 			<span><a href="">Tuyển sinh</a></span>
 		</div>
-		<div class="Item-content">a</div>
+		<div class="Item-content">
+			<div class="Item-content-left">
+				<span class="Item-content-left-top"><img src="images/npt.jpg"></span>
+				<span class="Item-content-left-mid">
+					<a href="">Tổng bí thư Nguyễn Phú Trọng trong ngày đắc cử Chủ tịch nước</a>
+				</span>
+				<span class="Item-content-left-bot">
+					<p>Chiều 23/10, những tràng pháo tay, hoa tươi và những nụ cười gửi gắm kỳ vọng khi Tổng bí thư Nguyễn Phú Trọng được bầu làm Chủ tịch nước.</p>
+				</span>
+			</div>
+			<div class="Item-content-right">
+				<span class="Item-content-right-top">
+					<span><img src="images/bai1.jpg"></span>
+					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+				</span>
+				<span class="Item-content-right-mid">
+					<span><img src="images/bai2.jpg"></span>
+					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+				</span>
+				<span class="Item-content-right-bot">
+					<span><img src="images/bai3.jpg"></span>
+					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+				</span>
+			</div>
+		</div>
 	</div>
 	<div id="Sidebar">
 		<div class="Title-Sidebar"><label><a href="">Tin tức mới nhất</a></label></div>
@@ -127,8 +192,32 @@
 				</span>
 			</div>
 		</div>
+		<div class="Footer-Sidebar">
+			<div class="fb-page" data-href="https://www.facebook.com/www.vute.skv/" data-tabs="timeline" data-height="200px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/www.vute.skv/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/www.vute.skv/">Trường Đại Học Sư Phạm Kỹ Thuật Vinh</a></blockquote></div>
+		</div>
 	</div>
 </div>
-<div id="Footer"></div>
+<div id="Footer">
+	<span class="Footer-1">
+	<a href=""><img src="images/LogoMakr_4rCgRo.png"></a>
+	</span>
+	<span class="Footer-2">
+		<span class="Footer-title"><a href="">Khoa công nghệ thông tin</a></span>
+		<span class="Footer-content">Trường đại học sư phạm kỹ thuật Vinh</span>
+	</span>
+	<span class="Footer-3">
+		<span class="Footer-title">Theo dõi chúng tôi</span>
+		<span class="Footer-content">
+			<a href="https://www.facebook.com/zzzhvczzz"><img src="images/iconfb.png"></a>
+			<a href="https://twitter.com/?lang=vi"><img src="images/iconyt.png"></a>
+			<a href="https://youtube.com"><img src="images/icontwt.png"></a>
+		</span>
+	</span>
+	<span class="Footer-4">
+		<span class="Footer-title">Thống kê truy cập</span>
+		<span class="Footer-content"><a href="https://info.flagcounter.com/zWRL"><img src="https://s01.flagcounter.com/mini/zWRL/bg_FFFFFF/txt_000000/border_CCCCCC/flags_0/" alt="Flag Counter" border="0"></a>
+		</span>
+	</span>
+</div>
 </body>
 </html>
