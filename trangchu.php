@@ -16,7 +16,7 @@
 	width:90%;
 	margin:auto;
 	margin-top:80px;
-	background-image: linear-gradient(to bottom, #deebf2, #ddeef0, #e0f0ec, #e7f2e8, #f0f2e5);
+	background: black;
 }
 /* Menu mẹ*/
 #MenuTop {
@@ -64,26 +64,44 @@
 /* Slide */
 #Slide {width: 100%; height: 20px; background: black; float: left;}
 /* Content */
-#Content {width: 80%; background: blue; float: left;}
+#Content {width: 80%; float: left;}
 .TitleContent { 
-	width: 99.7%; 
+	width: 99.8%; 
 	height: 40px; 
-	border: 1px solid rgba(0,0,0,1);  
-	background-image:linear-gradient(to right bottom,#8c98c2,#779ec1,#68a2ba,#64a5ae, #6ca69f);
+	border-bottom: 1px solid rgba(0,0,0,.2);
 	display: grid;
-	grid-template-columns: 6% 94%;
+	grid-template-columns: 15% 85%;
 	align-items: center;
 	margin: auto;
+	position: relative;
+	overflow: hidden;
+	opacity: 0.9;
 }
 .TitleContent a {
 	list-style-type: none;
 	text-decoration: none;
 	font-size: 20px;
-	color: black;
+	color: #753157;
 	font-family: Bookman;
 }
 .TitleContent a:hover {
-	text-decoration: underline;
+
+}
+.TitleContent:before {
+	content: "";
+	position: absolute;
+	width:200px;
+	height: 100%;
+	background: rgba(0,0,0,.1);
+	transform: skew(35deg);
+	left: -20px;
+}
+.TitleContent span {
+	z-index: 10;
+}
+.TitleContent label {
+	margin: auto;
+	z-index: 10;
 }
 /* SideBar */
 #Sidebar {width: 20%; height: 20px; background: red; float: left;}
@@ -122,7 +140,6 @@
 					   <li><a href="">Tầm nhìn</a></li>
 		           </ul>
 		   </li>
-		   
 		   <li><a href="">Giảng viên</a>
 		           <ul class="sub-menu">
 		              <li><a href="">Thông báo</a></li>
@@ -150,19 +167,17 @@
 	<div id="Slide"></div>
 	<div id="Content">
 		<div class="TitleContent">
-			<span><img src="images/tintucicon.png"></i></span>
-			<span><a href="">Tin tức</a></span>
+			<label><a href="">Tin tức</a></label>
 		</div>
-		a
+		<div class="Item-content">a</div>
 		<div class="TitleContent">
-			<span><img src="images/thongbaoicon.png"></i></span>
-			<span><a href="">Thông báo</a></span>
+			<label><a href="">Thông báo</a></label>
 		</div>
-		a
+		<div class="Item-content">a</div>
 		<div class="TitleContent">
-			<span><img src="images/tuyendungicon.png"></i></span>
-			<span><a href="">Tuyển sinh</a> </span>
+			<label><a href="">Tuyển sinh</a></label>
 		</div>
+		<div class="Item-content">a</div>
 	</div>
 	<div id="Sidebar"></div>
 </div>
