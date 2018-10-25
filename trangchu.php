@@ -94,13 +94,13 @@
 			<div class="Item-content-left">
 			<?php
 				include("config.php");
-				$query = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)  AND theloai = "tt" ";
+				$query = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='tt')  AND theloai = 'tt'";
 				$result = mysqli_query($conn,$query);
 				while ($row = mysqli_fetch_array($result)) {
 				# code... ?>
 				<span class="Item-content-left-top"><img src='<?php echo $row["hinhanh"]; ?>'></span>
 				<span class="Item-content-left-mid">
-					<a href="tintucid?<?php echo $row['id']; ?>"><?php echo $row['tieude']; ?></a>
+					<a href="tintuc.php?id=<?php echo $row['id']; ?>"><?php echo $row['tieude']; ?></a>
 				</span>
 				<span class="Item-content-left-bot">
 					<p><?php echo $row['caudaunoidung']; ?>...</p>
@@ -112,141 +112,19 @@
 			<div class="Item-content-right">
 				<?php
 					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-1  AND theloai = "tt"";
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='tt')-1  AND theloai = 'tt'";
 					$result = mysqli_query($conn,$query);
 					while ($row = mysqli_fetch_array($result)) {
 						# code...
 				?>
 				<span class="Item-content-right-top">
 					<span><img src="<?php echo $row['hinhanh'];?>"></span>
-					<a href=""><?php echo $row['tieude'];?>	</a>
+					<a href="tintuc.php?id=<?php echo $row['id']; ?>"><?php echo $row['tieude'];?>	</a>
 				</span>
 				<?php } ?>
 				<?php
 					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-2  AND theloai = "tt"";
-					$result = mysqli_query($conn,$query);
-					while ($row = mysqli_fetch_array($result)) {
-						# code...
-				?>
-				<span class="Item-content-right-mid">
-					<span><img src="<?php echo $row['hinhanh'];?>"></span>
-					<a href=""><?php echo $row['tieude'];?>	</a>
-				</span>
-				<?php } ?>
-				<?php
-					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-3  AND theloai = "tt"";
-					$result = mysqli_query($conn,$query);
-					while ($row = mysqli_fetch_array($result)) {
-						# code...
-				?>
-				<span class="Item-content-right-bot">
-					<span><img src="<?php echo $row['hinhanh'];?>"></span>
-					<a href=""><?php echo $row['tieude'];?>	</a>
-				</span>
-				<?php } ?>
-			</div>
-		</div>
-		<div class="TitleContent">
-			<span><a href="">Thông báo</a></span>
-		</div>
-		<div class="Item-content">
-			<div class="Item-content-left">
-			<?php
-				include("config.php");
-				$query = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)  AND theloai = "tt"";
-				$result = mysqli_query($conn,$query);
-				while ($row = mysqli_fetch_array($result)) {
-				# code... ?>
-				<span class="Item-content-left-top"><img src='<?php echo $row["hinhanh"]; ?>'></span>
-				<span class="Item-content-left-mid">
-					<a href="tintucid?<?php echo $row['id']; ?>"><?php echo $row['tieude']; ?></a>
-				</span>
-				<span class="Item-content-left-bot">
-					<p><?php echo $row['caudaunoidung']; ?>...</p>
-				</span>
-			<?php
-				}
-			?>
-			</div>
-			<div class="Item-content-right">
-				<?php
-					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-1  AND theloai = "tt"";
-					$result = mysqli_query($conn,$query);
-					while ($row = mysqli_fetch_array($result)) {
-						# code...
-				?>
-				<span class="Item-content-right-top">
-					<span><img src="<?php echo $row['hinhanh'];?>"></span>
-					<a href=""><?php echo $row['tieude'];?>	</a>
-				</span>
-				<?php } ?>
-				<?php
-					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-2  AND theloai = "tt"";
-					$result = mysqli_query($conn,$query);
-					while ($row = mysqli_fetch_array($result)) {
-						# code...
-				?>
-				<span class="Item-content-right-mid">
-					<span><img src="<?php echo $row['hinhanh'];?>"></span>
-					<a href=""><?php echo $row['tieude'];?>	</a>
-				</span>
-				<?php } ?>
-				<?php
-					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-3  AND theloai = "tt"";
-					$result = mysqli_query($conn,$query);
-					while ($row = mysqli_fetch_array($result)) {
-						# code...
-				?>
-				<span class="Item-content-right-bot">
-					<span><img src="<?php echo $row['hinhanh'];?>"></span>
-					<a href=""><?php echo $row['tieude'];?>	</a>
-				</span>
-				<?php } ?>
-			</div>
-		</div>
-		<div class="TitleContent">
-			<span><a href="">Tuyển sinh</a></span>
-		</div>
-		<div class="Item-content">
-			<div class="Item-content-left">
-			<?php
-				include("config.php");
-				$query = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)  AND theloai = "tt"";
-				$result = mysqli_query($conn,$query);
-				while ($row = mysqli_fetch_array($result)) {
-				# code... ?>
-				<span class="Item-content-left-top"><img src='<?php echo $row["hinhanh"]; ?>'></span>
-				<span class="Item-content-left-mid">
-					<a href="tintucid?<?php echo $row['id']; ?>"><?php echo $row['tieude']; ?></a>
-				</span>
-				<span class="Item-content-left-bot">
-					<p><?php echo $row['caudaunoidung']; ?>...</p>
-				</span>
-			<?php
-				}
-			?>
-			</div>
-			<div class="Item-content-right">
-				<?php
-					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-1  AND theloai = "tt"";
-					$result = mysqli_query($conn,$query);
-					while ($row = mysqli_fetch_array($result)) {
-						# code...
-				?>
-				<span class="Item-content-right-top">
-					<span><img src="<?php echo $row['hinhanh'];?>"></span>
-					<a href=""><?php echo $row['tieude'];?>	</a>
-				</span>
-				<?php } ?>
-				<?php
-					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-2  AND theloai = "tt"";
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='tt')-2  AND theloai = 'tt'";
 					$result = mysqli_query($conn,$query);
 					while ($row = mysqli_fetch_array($result)) {
 						# code...
@@ -258,7 +136,129 @@
 				<?php } ?>
 				<?php
 					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-3  AND theloai = "tt"";
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='tt')-3  AND theloai = 'tt'";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
+				<span class="Item-content-right-bot">
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href="tintuc.php?id=<?php echo $row['id']; ?>"><?php echo $row['tieude'];?>	</a>
+				</span>
+				<?php } ?>
+			</div>
+		</div>
+		<div class="TitleContent">
+			<span><a href="">Thông báo</a></span>
+		</div>
+		<div class="Item-content">
+			<div class="Item-content-left">
+			<?php
+				include("config.php");
+				$query = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='tb')  AND theloai = 'tb'";
+				$result = mysqli_query($conn,$query);
+				while ($row = mysqli_fetch_array($result)) {
+				# code... ?>
+				<span class="Item-content-left-top"><img src='<?php echo $row["hinhanh"]; ?>'></span>
+				<span class="Item-content-left-mid">
+					<a href="tintuc.php?id=<?php echo $row['id']; ?>"><?php echo $row['tieude']; ?></a>
+				</span>
+				<span class="Item-content-left-bot">
+					<p><?php echo $row['caudaunoidung']; ?>...</p>
+				</span>
+			<?php
+				}
+			?>
+			</div>
+			<div class="Item-content-right">
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='tb')-1  AND theloai = 'tb'";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
+				<span class="Item-content-right-top">
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href="tintuc.php?id=<?php echo $row['id']; ?>"><?php echo $row['tieude'];?>	</a>
+				</span>
+				<?php } ?>
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc  WHERE theloai='tb')-2  AND theloai = 'tb'";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
+				<span class="Item-content-right-mid">
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href="tintuc.php?id=<?php echo $row['id']; ?>"><?php echo $row['tieude'];?>	</a>
+				</span>
+				<?php } ?>
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='tb')-3  AND theloai = 'tb'";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
+				<span class="Item-content-right-bot">
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href="tintuc.php?id=<?php echo $row['id']; ?>"><?php echo $row['tieude'];?>	</a>
+				</span>
+				<?php } ?>
+			</div>
+		</div>
+		<div class="TitleContent">
+			<span><a href="">Tuyển sinh</a></span>
+		</div>
+		<div class="Item-content">
+			<div class="Item-content-left">
+			<?php
+				include("config.php");
+				$query = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='ts')  AND theloai = 'ts'";
+				$result = mysqli_query($conn,$query);
+				while ($row = mysqli_fetch_array($result)) {
+				# code... ?>
+				<span class="Item-content-left-top"><img src='<?php echo $row["hinhanh"]; ?>'></span>
+				<span class="Item-content-left-mid">
+					<a href="tintuc.php?id=<?php echo $row['id']; ?>"><?php echo $row['tieude']; ?></a>
+				</span>
+				<span class="Item-content-left-bot">
+					<p><?php echo $row['caudaunoidung']; ?>...</p>
+				</span>
+			<?php
+				}
+			?>
+			</div>
+			<div class="Item-content-right">
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='ts')-1  AND theloai ='ts'";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
+				<span class="Item-content-right-top">
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href="tintuc.php?id=<?php echo $row['id']; ?>"><?php echo $row['tieude'];?>	</a>
+				</span>
+				<?php } ?>
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='ts')-2  AND theloai = 'ts'";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
+				<span class="Item-content-right-mid">
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href="tintuc.php?id=<?php echo $row['id']; ?>"><?php echo $row['tieude'];?>	</a>
+				</span>
+				<?php } ?>
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='ts')-3  AND theloai = 'ts'";
 					$result = mysqli_query($conn,$query);
 					while ($row = mysqli_fetch_array($result)) {
 						# code...
