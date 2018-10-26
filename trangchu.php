@@ -34,7 +34,6 @@
       });
     });
 </script>
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -93,27 +92,60 @@
 		</div>
 		<div class="Item-content">
 			<div class="Item-content-left">
-				<span class="Item-content-left-top"><img src="images/npt.jpg"></span>
+			<?php
+				include("config.php");
+				$query = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)  AND theloai = "tt" ";
+				$result = mysqli_query($conn,$query);
+				while ($row = mysqli_fetch_array($result)) {
+				# code... ?>
+				<span class="Item-content-left-top"><img src='<?php echo $row["hinhanh"]; ?>'></span>
 				<span class="Item-content-left-mid">
-					<a href="">Tổng bí thư Nguyễn Phú Trọng trong ngày đắc cử Chủ tịch nước</a>
+					<a href="tintucid?<?php echo $row['id']; ?>"><?php echo $row['tieude']; ?></a>
 				</span>
 				<span class="Item-content-left-bot">
-					<p>Chiều 23/10, những tràng pháo tay, hoa tươi và những nụ cười gửi gắm kỳ vọng khi Tổng bí thư Nguyễn Phú Trọng được bầu làm Chủ tịch nước.</p>
+					<p><?php echo $row['caudaunoidung']; ?>...</p>
 				</span>
+			<?php
+				}
+			?>
 			</div>
 			<div class="Item-content-right">
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-1  AND theloai = "tt"";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
 				<span class="Item-content-right-top">
-					<span><img src="images/bai1.jpg"></span>
-					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href=""><?php echo $row['tieude'];?>	</a>
 				</span>
+				<?php } ?>
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-2  AND theloai = "tt"";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
 				<span class="Item-content-right-mid">
-					<span><img src="images/bai2.jpg"></span>
-					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href=""><?php echo $row['tieude'];?>	</a>
 				</span>
+				<?php } ?>
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-3  AND theloai = "tt"";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
 				<span class="Item-content-right-bot">
-					<span><img src="images/bai3.jpg"></span>
-					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href=""><?php echo $row['tieude'];?>	</a>
 				</span>
+				<?php } ?>
 			</div>
 		</div>
 		<div class="TitleContent">
@@ -121,27 +153,60 @@
 		</div>
 		<div class="Item-content">
 			<div class="Item-content-left">
-				<span class="Item-content-left-top"><img src="images/npt.jpg"></span>
+			<?php
+				include("config.php");
+				$query = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)  AND theloai = "tt"";
+				$result = mysqli_query($conn,$query);
+				while ($row = mysqli_fetch_array($result)) {
+				# code... ?>
+				<span class="Item-content-left-top"><img src='<?php echo $row["hinhanh"]; ?>'></span>
 				<span class="Item-content-left-mid">
-					<a href="">Tổng bí thư Nguyễn Phú Trọng trong ngày đắc cử Chủ tịch nước</a>
+					<a href="tintucid?<?php echo $row['id']; ?>"><?php echo $row['tieude']; ?></a>
 				</span>
 				<span class="Item-content-left-bot">
-					<p>Chiều 23/10, những tràng pháo tay, hoa tươi và những nụ cười gửi gắm kỳ vọng khi Tổng bí thư Nguyễn Phú Trọng được bầu làm Chủ tịch nước.</p>
+					<p><?php echo $row['caudaunoidung']; ?>...</p>
 				</span>
+			<?php
+				}
+			?>
 			</div>
 			<div class="Item-content-right">
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-1  AND theloai = "tt"";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
 				<span class="Item-content-right-top">
-					<span><img src="images/bai1.jpg"></span>
-					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href=""><?php echo $row['tieude'];?>	</a>
 				</span>
+				<?php } ?>
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-2  AND theloai = "tt"";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
 				<span class="Item-content-right-mid">
-					<span><img src="images/bai2.jpg"></span>
-					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href=""><?php echo $row['tieude'];?>	</a>
 				</span>
+				<?php } ?>
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-3  AND theloai = "tt"";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
 				<span class="Item-content-right-bot">
-					<span><img src="images/bai3.jpg"></span>
-					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href=""><?php echo $row['tieude'];?>	</a>
 				</span>
+				<?php } ?>
 			</div>
 		</div>
 		<div class="TitleContent">
@@ -149,27 +214,60 @@
 		</div>
 		<div class="Item-content">
 			<div class="Item-content-left">
-				<span class="Item-content-left-top"><img src="images/npt.jpg"></span>
+			<?php
+				include("config.php");
+				$query = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)  AND theloai = "tt"";
+				$result = mysqli_query($conn,$query);
+				while ($row = mysqli_fetch_array($result)) {
+				# code... ?>
+				<span class="Item-content-left-top"><img src='<?php echo $row["hinhanh"]; ?>'></span>
 				<span class="Item-content-left-mid">
-					<a href="">Tổng bí thư Nguyễn Phú Trọng trong ngày đắc cử Chủ tịch nước</a>
+					<a href="tintucid?<?php echo $row['id']; ?>"><?php echo $row['tieude']; ?></a>
 				</span>
 				<span class="Item-content-left-bot">
-					<p>Chiều 23/10, những tràng pháo tay, hoa tươi và những nụ cười gửi gắm kỳ vọng khi Tổng bí thư Nguyễn Phú Trọng được bầu làm Chủ tịch nước.</p>
+					<p><?php echo $row['caudaunoidung']; ?>...</p>
 				</span>
+			<?php
+				}
+			?>
 			</div>
 			<div class="Item-content-right">
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-1  AND theloai = "tt"";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
 				<span class="Item-content-right-top">
-					<span><img src="images/bai1.jpg"></span>
-					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href=""><?php echo $row['tieude'];?>	</a>
 				</span>
+				<?php } ?>
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-2  AND theloai = "tt"";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
 				<span class="Item-content-right-mid">
-					<span><img src="images/bai2.jpg"></span>
-					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href="tintuc.php?id=<?php echo $row['id']; ?>"><?php echo $row['tieude'];?>	</a>
 				</span>
+				<?php } ?>
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)-3  AND theloai = "tt"";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
 				<span class="Item-content-right-bot">
-					<span><img src="images/bai3.jpg"></span>
-					<a href="">Tiểu sử tân Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng.</a>
+					<span><img src="<?php echo $row['hinhanh'];?>"></span>
+					<a href=""><?php echo $row['tieude'];?>	</a>
 				</span>
+				<?php } ?>
 			</div>
 		</div>
 	</div>
@@ -177,19 +275,35 @@
 		<div class="Title-Sidebar"><label><a href="">Tin tức mới nhất</a></label></div>
 		<div class="Content-Sidebar">
 			<div class="Big-Content-Sidebar">
-				<span class="img"><a href=""><img src="images/can-ho-hang-sang-vietnamnet-180x101.jpg"></a></span>
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc)";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
+				<span class="img"><a href=""><img src="<?php echo $row['hinhanh']; ?>"></a></span>
 				<span class="left">
 					<a href="">
-					Căn hộ siêu sang ì ạch thoát hàng, đại gia ôm tiền rời Hà Nội?
+					<?php echo $row['tieude'];?>
 					</a>
 				</span>
+				<?php } ?>
 			</div>
 			<div class="Small-Content-Sidebar">
+				<?php
+					include("config.php");
+					$query  = "SELECT * FROM tintuc WHERE id < (SELECT MAX(id) FROM tintuc)";
+					$result = mysqli_query($conn,$query);
+					while ($row = mysqli_fetch_array($result)) {
+						# code...
+				?>
 				<span>
 					<a href="">
-					Dân chơi Sài Gòn đốt tiền, ùn ùn kéo nhau lên nóc nhà !
+					<?php echo $row['tieude'];  ?>
 					</a>
 				</span>
+				<?php } ?>
 			</div>
 		</div>
 		<div class="Footer-Sidebar">
