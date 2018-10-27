@@ -42,21 +42,8 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <style type="text/css">
-.News-Title {width: 100%; height: auto;  float: left; font-size: 25px; margin-top: 20px; color: red; border-bottom: 1px solid rgba(0,0,0,.1); position: relative;}
-.News-Title:before {content: ''; position: absolute; width: 5px; height: 100%; background: black;  } 
-.News-Title p {width: 90%; height: auto; margin-left: 10px;}
-.News-Firt {width: 100%; height: 80px; text-align: left; float: left; margin-top: 20px;}
-.News-Images {width: 100%; height: 300px; float: left; display: flex; flex-wrap: wrap; align-items: center;}
-.News-Images  img { width: 80%; height: 100%; margin: auto; }
-.News-Content {width: 98%; height: auto; float: left; margin: 20px;}
-.News-Content img {width: 80%; height: 300px; margin: auto;}
-.News-Content p { width: 95%; }
-.News-Footer {width: 100%; height: auto; float: left; position: relative;  margin-bottom: 10px;}
-.News-Footer p {width: 80%; height: 100%; font-size: 15px; margin-left: 10px;}
-.News-Footer:before {content: ''; position: absolute; width: 5px; height: 100%; background: black;  } 
-.Timepost {width: 100%; float: left; height: 30px; font-size: 10px; margin-top: 5px; position: relative;}
-.Timepost p {width: 80%; height: 100%; margin-left: 20px;}
-.Timepost:before {content: ''; position: absolute; width: 5px; height: 100%; background: black;  } 
+#bodygioithieu {width: 75%; float: left;  border-right: 1px solid rgba(0,0,0,.1); margin-top: 80px;}
+#bodygioithieu p {width: 100%; float: left;}
 </style>
 <body>
  <div id="MenuTop">
@@ -77,28 +64,12 @@
 		</ul>
 	</div>
 </div>
-<div id="Body">
-	<div id="Content">
-		<?php
-		$id = $_GET['id'];
-		include("config.php");
-		$query = "SELECT * FROM `tintuc` WHERE id='$id'";
-		$result = mysqli_query($conn,$query);
-		while ($row = mysqli_fetch_array($result)) {
-			# code...
-		?>
-			<span class="News-Title"><p><?php echo $row['tieude']; ?></p></span>
-			<span class="Timepost"><p><?php echo $row['ngaydang']; ?></p></span>
-			<span class="News-Firt"><?php echo $row['caudaunoidung']; ?></span>
-			<span class="News-Images"><img src="<?php echo $row['hinhanh']; ?>"></span>
-			<span class="News-Content"><?php echo $row['noidung']; ?></span>
-			<span class="News-Footer">
-				<p>Người đăng: <?php echo $row['nguoidang']; ?></p>
-			</span>
-			<?php 
-				}
-			?>
-	</div>
+<div id="bodygioithieu">
+
+<p align="center" style="color: red; border-bottom: 1px solid rgba(0,0,0,.2);"><strong>BAN CHẤP H&Agrave;NH</strong></p>
+
+<p align="center"><img alt="" src="http://doankhoacntt.com/upload/images/BCH/no-bg-18-19.png" /></p>
+</div>
 	<div id="Sidebar">
 		<div class="Title-Sidebar"><label><a href="">Tin tức mới nhất</a></label></div>
 		<div class="Content-Sidebar">
@@ -118,7 +89,7 @@
 				</span>
 				<?php } ?>
 			</div>
-			<div class="Small-Content-Sidebar">
+<div class="Small-Content-Sidebar">
 				<?php
 					include("config.php");
 					$query  = "SELECT * FROM tintuc WHERE id < (SELECT MAX(id) FROM tintuc)";
@@ -133,8 +104,8 @@
 				</span>
 				<?php } ?>
 			</div>
-		</div>
-		<div class="Footer-Sidebar">
+</div>
+<div class="Footer-Sidebar">
 			<div class="fb-page" data-href="https://www.facebook.com/www.vute.skv/" data-tabs="timeline" data-height="200px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/www.vute.skv/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/www.vute.skv/">Trường Đại Học Sư Phạm Kỹ Thuật Vinh</a></blockquote></div>
 		</div>
 	</div>

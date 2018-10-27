@@ -46,34 +46,17 @@
   	<div id="logo"><a href="trangchu.php"><img style="height: 80px; width: 100%;" src="images/LogoMakr_3vbyPt.png"/></a></div>
 		<div id="Menu">
 		<ul>
-		   <li><a href="">Trang chủ</a></li>
-		   <li><a href="">Giới thiệu</a>
+		   <li><a href="trangchu.php">Trang chủ</a></li>
+		   <li><a href="gioithieu.php">Giới thiệu</a>
 		           <ul class="sub-menu">
-		              <li><a href="">Giới thiệu Khoa</a></li>
-		              <li><a href="">Môi trường </a></li>
-					   <li><a href="">Tầm nhìn</a></li>
+		              <li><a href="gioithieu.php">Giới thiệu Khoa</a></li>
+					   <li><a href="tamnhin.php">Tầm nhìn</a></li>
 		           </ul>
 		   </li>
-		   <li><a href="">Giảng viên</a>
-		           <ul class="sub-menu">
-		              <li><a href="">Thông báo</a></li>
-		              <li><a href="">Biểu mẫu</a></li>					
-		           </ul>
-		   </li>
-		   <li><a href="">Sinh viên</a>
-		           <ul class="sub-menu">
-		              <li><a href="">Thông báo</a></li>
-		              <li><a href="">Việc làm thực tập</a></li>
-					  <li><a href="">Biểu mẫu</a></li>
-					  <li><a href="">Khen thưởng</a></li>				
-		           </ul></li>
-		   
-		   <li><a href="">Ðoàn Khoa</a>
-		           <ul class="sub-menu">
-		              <li><a href="">Thông báo</a></li>
-					  <li><a href="">Biểu mẫu</a></li>				
-		           </ul></li>
-		   <li><a href="">Liên hệ</a></li>
+		   <li><a href="giangvien.php">Giảng viên</a>
+		   </li>		   
+		   <li><a href="doankhoa.php">Ðoàn Khoa</a>
+		   <li><a href="lienhe.php">Liên hệ</a></li>
 		</ul>
 	</div>
 </div>
@@ -88,13 +71,13 @@
 		</div>
 	<div id="Content">
 		<div class="TitleContent">
-			<span><a href="">Tin tức</a></span>
+			<span><a href="trangtin.php?theloai=tt">Tin tức</a></span>
 		</div>
 		<div class="Item-content">
 			<div class="Item-content-left">
 			<?php
 				include("config.php");
-				$query = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='tt')  AND theloai = 'tt'";
+				$query = "SELECT * FROM tintuc  WHERE theloai='tt' ORDER BY id DESC LIMIT 0,1";
 				$result = mysqli_query($conn,$query);
 				while ($row = mysqli_fetch_array($result)) {
 				# code... ?>
@@ -112,7 +95,7 @@
 			<div class="Item-content-right">
 				<?php
 					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='tt')-1  AND theloai = 'tt'";
+					$query  = "SELECT * FROM tintuc WHERE theloai='tt' ORDER BY id DESC LIMIT 1,1";
 					$result = mysqli_query($conn,$query);
 					while ($row = mysqli_fetch_array($result)) {
 						# code...
@@ -124,7 +107,7 @@
 				<?php } ?>
 				<?php
 					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='tt')-2  AND theloai = 'tt'";
+					$query  = "SELECT * FROM tintuc WHERE theloai='tt' ORDER BY id DESC LIMIT 2,1";
 					$result = mysqli_query($conn,$query);
 					while ($row = mysqli_fetch_array($result)) {
 						# code...
@@ -136,7 +119,7 @@
 				<?php } ?>
 				<?php
 					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='tt')-3  AND theloai = 'tt'";
+					$query  = "SELECT * FROM tintuc WHERE theloai='tt' ORDER BY id DESC LIMIT 3,1";
 					$result = mysqli_query($conn,$query);
 					while ($row = mysqli_fetch_array($result)) {
 						# code...
@@ -149,13 +132,13 @@
 			</div>
 		</div>
 		<div class="TitleContent">
-			<span><a href="">Thông báo</a></span>
+			<span><a href="trangtin.php?theloai=tb">Thông báo</a></span>
 		</div>
 		<div class="Item-content">
 			<div class="Item-content-left">
 			<?php
 				include("config.php");
-				$query = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='tb')  AND theloai = 'tb'";
+				$query = "SELECT * FROM tintuc  WHERE theloai='tb' ORDER BY id DESC LIMIT 0,1";
 				$result = mysqli_query($conn,$query);
 				while ($row = mysqli_fetch_array($result)) {
 				# code... ?>
@@ -173,7 +156,7 @@
 			<div class="Item-content-right">
 				<?php
 					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='tb')-1  AND theloai = 'tb'";
+					$query  = "SELECT * FROM tintuc  WHERE theloai='tb' ORDER BY id DESC LIMIT 1,1";
 					$result = mysqli_query($conn,$query);
 					while ($row = mysqli_fetch_array($result)) {
 						# code...
@@ -185,7 +168,7 @@
 				<?php } ?>
 				<?php
 					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc  WHERE theloai='tb')-2  AND theloai = 'tb'";
+					$query  = "SELECT * FROM tintuc  WHERE theloai='tb' ORDER BY id DESC LIMIT 2,1";
 					$result = mysqli_query($conn,$query);
 					while ($row = mysqli_fetch_array($result)) {
 						# code...
@@ -197,7 +180,7 @@
 				<?php } ?>
 				<?php
 					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='tb')-3  AND theloai = 'tb'";
+					$query  = "SELECT * FROM tintuc  WHERE theloai='tb' ORDER BY id DESC LIMIT 3,1";
 					$result = mysqli_query($conn,$query);
 					while ($row = mysqli_fetch_array($result)) {
 						# code...
@@ -210,13 +193,13 @@
 			</div>
 		</div>
 		<div class="TitleContent">
-			<span><a href="">Tuyển sinh</a></span>
+			<span><a href="trangtin.php?theloai=ts">Tuyển sinh</a></span>
 		</div>
 		<div class="Item-content">
 			<div class="Item-content-left">
 			<?php
 				include("config.php");
-				$query = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='ts')  AND theloai = 'ts'";
+				$query = "SELECT * FROM tintuc  WHERE theloai='ts' ORDER BY id DESC LIMIT 0,1";
 				$result = mysqli_query($conn,$query);
 				while ($row = mysqli_fetch_array($result)) {
 				# code... ?>
@@ -234,7 +217,7 @@
 			<div class="Item-content-right">
 				<?php
 					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='ts')-1  AND theloai ='ts'";
+					$query  = "SELECT * FROM tintuc  WHERE theloai='ts' ORDER BY id DESC LIMIT 1,1";
 					$result = mysqli_query($conn,$query);
 					while ($row = mysqli_fetch_array($result)) {
 						# code...
@@ -246,7 +229,7 @@
 				<?php } ?>
 				<?php
 					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='ts')-2  AND theloai = 'ts'";
+					$query  = "SELECT * FROM tintuc  WHERE theloai='ts' ORDER BY id DESC LIMIT 2,1";
 					$result = mysqli_query($conn,$query);
 					while ($row = mysqli_fetch_array($result)) {
 						# code...
@@ -258,7 +241,7 @@
 				<?php } ?>
 				<?php
 					include("config.php");
-					$query  = "SELECT * FROM tintuc WHERE id = (SELECT MAX(id) FROM tintuc WHERE theloai='ts')-3  AND theloai = 'ts'";
+					$query  = "SELECT * FROM tintuc  WHERE theloai='ts' ORDER BY id DESC LIMIT 3,1";
 					$result = mysqli_query($conn,$query);
 					while ($row = mysqli_fetch_array($result)) {
 						# code...

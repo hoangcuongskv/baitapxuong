@@ -42,21 +42,8 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <style type="text/css">
-.News-Title {width: 100%; height: auto;  float: left; font-size: 25px; margin-top: 20px; color: red; border-bottom: 1px solid rgba(0,0,0,.1); position: relative;}
-.News-Title:before {content: ''; position: absolute; width: 5px; height: 100%; background: black;  } 
-.News-Title p {width: 90%; height: auto; margin-left: 10px;}
-.News-Firt {width: 100%; height: 80px; text-align: left; float: left; margin-top: 20px;}
-.News-Images {width: 100%; height: 300px; float: left; display: flex; flex-wrap: wrap; align-items: center;}
-.News-Images  img { width: 80%; height: 100%; margin: auto; }
-.News-Content {width: 98%; height: auto; float: left; margin: 20px;}
-.News-Content img {width: 80%; height: 300px; margin: auto;}
-.News-Content p { width: 95%; }
-.News-Footer {width: 100%; height: auto; float: left; position: relative;  margin-bottom: 10px;}
-.News-Footer p {width: 80%; height: 100%; font-size: 15px; margin-left: 10px;}
-.News-Footer:before {content: ''; position: absolute; width: 5px; height: 100%; background: black;  } 
-.Timepost {width: 100%; float: left; height: 30px; font-size: 10px; margin-top: 5px; position: relative;}
-.Timepost p {width: 80%; height: 100%; margin-left: 20px;}
-.Timepost:before {content: ''; position: absolute; width: 5px; height: 100%; background: black;  } 
+#bodygioithieu {width: 75%; float: left;  border-right: 1px solid rgba(0,0,0,.1); margin-top: 80px;}
+#bodygioithieu p {width: 100%; float: left;}
 </style>
 <body>
  <div id="MenuTop">
@@ -77,28 +64,48 @@
 		</ul>
 	</div>
 </div>
-<div id="Body">
-	<div id="Content">
-		<?php
-		$id = $_GET['id'];
-		include("config.php");
-		$query = "SELECT * FROM `tintuc` WHERE id='$id'";
-		$result = mysqli_query($conn,$query);
-		while ($row = mysqli_fetch_array($result)) {
-			# code...
-		?>
-			<span class="News-Title"><p><?php echo $row['tieude']; ?></p></span>
-			<span class="Timepost"><p><?php echo $row['ngaydang']; ?></p></span>
-			<span class="News-Firt"><?php echo $row['caudaunoidung']; ?></span>
-			<span class="News-Images"><img src="<?php echo $row['hinhanh']; ?>"></span>
-			<span class="News-Content"><?php echo $row['noidung']; ?></span>
-			<span class="News-Footer">
-				<p>Người đăng: <?php echo $row['nguoidang']; ?></p>
-			</span>
-			<?php 
-				}
-			?>
-	</div>
+<div id="bodygioithieu">
+<h1 align="center" style="color: red"><strong>Gi&aacute; trị v&agrave; tầm nh&igrave;n</strong></h1>
+
+<p><strong>* GI&Aacute; TRỊ</strong><br />
+<br />
+Gắn liền với t&ocirc;n chỉ Tri thức - Đạo đức - S&aacute;ng tạo của nh&agrave; trường, gi&aacute; trị cốt l&otilde;i của Khoa C&ocirc;ng nghệ th&ocirc;ng tin được x&aacute;c định l&agrave;:&nbsp;<strong>Kiến thức - Kỹ năng - Hội nhập v&agrave; Cống hiến</strong>.</p>
+
+<p>&nbsp;</p>
+
+<p align="center"><img src="images/hutech1.jpg" style="height:300px; width:620px" /></p>
+
+<p><br />
+B&ecirc;n cạnh kiến thức khoa học cơ bản v&agrave; kiến thức chuy&ecirc;n m&ocirc;n vững chắc, người học được ch&uacute; trọng đ&agrave;o tạo to&agrave;n diện, c&oacute; kỹ năng thực h&agrave;nh nghề nghiệp th&agrave;nh thạo, c&oacute; khả năng th&iacute;ch ứng cao với m&ocirc;i trường kinh tế - x&atilde; hội, c&oacute; th&aacute;i độ v&agrave; đạo đức nghề nghiệp đ&uacute;ng đắn, c&oacute; khả năng l&agrave;m việc độc lập, s&aacute;ng tạo v&agrave; c&oacute; năng lực ph&aacute;t hiện, giải quyết những vấn đề thuộc chuy&ecirc;n ng&agrave;nh được đ&agrave;o tạo.&nbsp;<br />
+<br />
+Giảng vi&ecirc;n v&agrave; sinh vi&ecirc;n Khoa C&ocirc;ng nghệ th&ocirc;ng tin HUTECH li&ecirc;n tục cập nhật kiến thức mới về c&ocirc;ng nghệ th&ocirc;ng tin quốc tế để c&oacute; thể đi đầu nắm bắt những ph&aacute;t triển ứng dụng trong c&ocirc;ng t&aacute;c hội nhập.<br />
+<br />
+<strong>* TẦM NH&Igrave;N</strong><br />
+<br />
+Mục ti&ecirc;u chiến lược đến năm 2020 của khoa l&agrave; trở th&agrave;nh trung t&acirc;m đ&agrave;o tạo nguồn nh&acirc;n lực chất lượng cao h&agrave;ng đầu trong khu vực v&agrave; quốc tế cho c&aacute;c lĩnh vực li&ecirc;n quan trực tiếp đến C&ocirc;ng nghệ th&ocirc;ng tin.</p>
+
+<p>&nbsp;</p>
+
+<p align="center"><img src="images/hutech2.jpg" style="height:300px; width:620px" /><br />
+<em>Hệ thống m&aacute;y t&iacute;nh hiện đại của HUTECH l&agrave; nơi tổ chức nhiều sự kiện c&ocirc;ng nghệ th&ocirc;ng tin lớn</em></p>
+
+<p>Chất lượng v&agrave; hiệu quả đ&agrave;o tạo sinh vi&ecirc;n l&agrave; mục ti&ecirc;u h&agrave;ng đầu của khoa, l&agrave; nguy&ecirc;n tắc định hướng cho c&aacute;c hoạt động đ&agrave;o tạo v&agrave; nghi&ecirc;n cứu khoa học tại HUTECH. Học tập v&agrave; r&egrave;n luyện trong một m&ocirc;i trường s&aacute;ng tạo v&agrave; đổi mới, lu&ocirc;n cập nhật nhanh nhất về kiến thức c&ocirc;ng nghệ, kỹ thuật sẽ mang đến cho sinh vi&ecirc;n HUTECH sự trưởng th&agrave;nh về nh&acirc;n c&aacute;ch v&agrave; năng lực để c&oacute; thể vượt qua mọi th&aacute;ch thức, đối đầu với mọi thay đổi, đi đến th&agrave;nh c&ocirc;ng, g&oacute;p phần l&agrave;m phồn vinh đất nước v&agrave; th&uacute;c đẩy tiến tr&igrave;nh của nền kinh tế tri thức.<br />
+<br />
+<strong>* SỨ MỆNH</strong><br />
+&nbsp;</p>
+
+<ul>
+	<li>Khoa CNTT Trường ĐH C&ocirc;ng nghệ TP.HCM (HUTECH) c&oacute; chức năng đ&agrave;o tạo kỹ sư c&ocirc;ng nghệ th&ocirc;ng tin c&oacute; phẩm chất đạo đức v&agrave; kỹ năng giao tiếp tốt, th&ocirc;ng thạo ngoại ngữ, tinh thần l&agrave;m việc tập thể cao, c&oacute; năng lực chuy&ecirc;n m&ocirc;n vững v&agrave;ng, đ&oacute;ng g&oacute;p v&agrave;o tiến tr&igrave;nh hội nhập ph&aacute;t triển, c&ocirc;ng nghiệp ho&aacute;, hiện đại ho&aacute; đất nước.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p align="center"><img alt="" src="images/hutech3.jpg" style="height:300px; width:620px" /></p>
+
+<ul>
+	<li>L&agrave; nơi tập trung c&aacute;c chuy&ecirc;n gia, giảng vi&ecirc;n tr&igrave;nh độ cao; c&aacute;c chương tr&igrave;nh đ&agrave;o tạo li&ecirc;n kết quốc tế c&oacute; uy t&iacute;n tr&ecirc;n thế giới; cơ sở vật chất, trang thiết bị hiện đại với c&aacute;c dịch vụ ho&agrave;n hảo, đ&aacute;p ứng nhu cầu x&atilde; hội.</li>
+</ul>
+</div>
 	<div id="Sidebar">
 		<div class="Title-Sidebar"><label><a href="">Tin tức mới nhất</a></label></div>
 		<div class="Content-Sidebar">
@@ -118,7 +125,7 @@
 				</span>
 				<?php } ?>
 			</div>
-			<div class="Small-Content-Sidebar">
+<div class="Small-Content-Sidebar">
 				<?php
 					include("config.php");
 					$query  = "SELECT * FROM tintuc WHERE id < (SELECT MAX(id) FROM tintuc)";
@@ -133,8 +140,8 @@
 				</span>
 				<?php } ?>
 			</div>
-		</div>
-		<div class="Footer-Sidebar">
+</div>
+<div class="Footer-Sidebar">
 			<div class="fb-page" data-href="https://www.facebook.com/www.vute.skv/" data-tabs="timeline" data-height="200px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/www.vute.skv/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/www.vute.skv/">Trường Đại Học Sư Phạm Kỹ Thuật Vinh</a></blockquote></div>
 		</div>
 	</div>

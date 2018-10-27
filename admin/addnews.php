@@ -38,7 +38,8 @@
 	</table>
 </form>
 	<?php 
-	if (isset($_POST['btnadd'])) {
+	if (isset($_POST['btnadd'])) 
+	{
 		# code...
 		include('../config.php');
 		$tieude = isset($_POST['tieude'])?$_POST['tieude']:'';
@@ -50,17 +51,23 @@
 		$thumuc  = "imageupload/".$_FILES['hinhanh']['name'];
 		$file = $_FILES['hinhanh']['tmp_name'];
         $path = "../imageupload/".$_FILES['hinhanh']['name'];
-            if(move_uploaded_file($file, $path)){
+            if(move_uploaded_file($file, $path))
+            {
             	$query = "INSERT INTO `tintuc`(`id`, `tieude`, `noidung`, `ngaydang`, `nguoidang`, `hinhanh`, `caudaunoidung`, `theloai`) VALUES ('','$tieude','$noidung','$ngaydang','$nguoidang','$thumuc','$caudaubai','$chuyenmuc')";
 				$resultl = mysqli_query($conn,$query);
-				if ($resultl!="") {
-					# code...
-					echo "THem thanh cong !";
+				if ($resultl!="") 
+					{
+						echo "THem thanh cong !";
 					}
-					else {echo "Them that bai !"}
-            }else{
-            	echo "Them that bai !";
+				else 
+					{
+						echo "Them that bai !";
+					}
             }
+            else
+            	{
+            		echo "Them that bai !";
+            	}
 	}
 	?>
 </body>
