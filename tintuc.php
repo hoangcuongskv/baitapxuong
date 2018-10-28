@@ -45,11 +45,16 @@
 .News-Title {width: 100%; height: auto;  float: left; font-size: 25px; margin-top: 20px; color: red; border-bottom: 1px solid rgba(0,0,0,.1); position: relative;}
 .News-Title:before {content: ''; position: absolute; width: 5px; height: 100%; background: black;  } 
 .News-Title p {width: 90%; height: auto; margin-left: 10px;}
-.News-Firt {width: 100%; height: 80px; text-align: center; float: left; margin-top: 20px;}
+.News-Firt {width: 100%; height: 80px; text-align: left; float: left; margin-top: 20px;}
 .News-Images {width: 100%; height: 300px; float: left; display: flex; flex-wrap: wrap; align-items: center;}
 .News-Images  img { width: 80%; height: 100%; margin: auto; }
 .News-Content {width: 100%; height: auto; float: left; margin: 20px;}
-.News-Footer {width: 100%; height: 50px; float: left;}
+.News-Footer {width: 100%; height: auto; float: left; position: relative;  margin-bottom: 10px;}
+.News-Footer p {width: 80%; height: 100%; font-size: 15px; margin-left: 10px;}
+.News-Footer:before {content: ''; position: absolute; width: 5px; height: 100%; background: black;  } 
+.Timepost {width: 100%; float: left; height: 30px; font-size: 10px; margin-top: 5px; position: relative;}
+.Timepost p {width: 80%; height: 100%; margin-left: 20px;}
+.Timepost:before {content: ''; position: absolute; width: 5px; height: 100%; background: black;  } 
 </style>
 <body>
  <div id="MenuTop">
@@ -88,51 +93,26 @@
 	</div>
 </div>
 <div id="Body">
-	<div id="Slider">
-			<img class="slide" src="./images/slide1.jpg" stt="0">
-			<img class="slide" src="./images/slide2.jpg" stt="1" style="display:none;">
-			<img class="slide" src="./images/slide3.jpg" stt="2" style="display:none;">
-			<img class="slide" src="./images/slide4.jpg" stt="3" style="display:none;">
-			<a href="#" id="prev"><img src="./images/prev.png" width="64"height="64"></a>
-			<a href="#" id="next"><img src="./images/next.png" width="64"height="64"></a>
-		</div>
 	<div id="Content">
-			<span class="News-Title"><p>THÔNG BÁO ĐĂNG KÝ CHƯƠNG TRÌNH TÌNH THẦY TRÒ 2016</p></span>
-			<span class="News-Firt">THÔNG BÁO
-			V/v đăng ký tham gia kỳ thi lập trình viên sinh viên ACM/ICPC 
-			và các hoạt động “Chào mừng ngày nhà giáo Việt Nam 20/11” năm 2016</span>
-			<span class="News-Images"><img src="imageupload/bai1tt.jpg"></span>
-			<span class="News-Content">Nhằm thúc đẩy tinh thần học tập, nghiên cứu khoa học trong sinh viên; xây dựng đội tuyển; chuẩn bị nhân sự sẵn sàng cho việc tổ chức cuộc thi Olympic tin học sinh viên Việt Nam và Lập trình viên Sinh viên Quốc tế ACM/ICPC năm 2016
-			Ôn lại truyền truyền thống ngày Nhà giáo Việt Nam 20/11 và lòng biết ơn thầy cô, truyền thống “Tôn sư trọng đạo” của dân tộc; chào mừng thành công Đại hội Đại biểu Liên chi Đoàn khoa CNTT lần thứ VIII, nhiệm kỳ 2016 – 2019.
-			Thực hiện Chương trình công tác năm học 2016 – 2019; Ban Chấp hành Liên chi đoàn, Liên chi Hội Sinh viên khoa Công nghệ thông tin xây dựng kế hoạch tổ chức kỳ thi “lập trình viên sinh viên ACM/ICPC” và các hoạt động “Chào mừng ngày nhà giáo Việt Nam 20/11” năm 2016 cụ thể như sau:
-
-			I. THÀNH PHẦN THAM GIA
-			- Là học sinh, sinh viên đang học tập tại khoa Công nghệ thông tin trường Đại học Công nghiệp Hà Nội
-			II. THỜI GIAN – ĐỊA ĐIỂM ĐĂNG KÝ 
-			1. Thời gian: Từ ngày 01/11/2016 đến ngày 04/11/2016
-			2. Địa điểm: Văn phòng Đoàn – Hội khoa CNTT tầng 8, nhà A1
-			III. NỘI DUNG
-			1. Tổ chức thi lập trình viên sinh viên ACM/ICPC
-			- Thời gian: 7h30, ngày 18/11/2016 (thứ bảy)
-			- Địa điểm: Trung tâm thư viện tầng 3 nhà A11
-			- Nội dung:
-			- Thi theo hình thức nhóm:
-			+ Mỗi nhóm có 03 thành viên và mỗi nhóm tham gia cuộc thi sẽ giải 07 đến 10 bài toán bằng các ngôn ngữ như: C, C++, Java,...
-			+ Cơ cấu giải thưởng: 01 giải Nhất, 01 giải Nhì, 01 giải Ba.
-			- Thi theo hình thức cá nhân:
-			+ Mỗi thành viên tham gia cuộc thi sẽ giải 03 đến 05 bài toán bằng các ngôn ngữ như: C, C++, Java,...
-			+ Cơ cấu giải thưởng: 01 giải Nhất, 01 giải Nhì, 01 giải Ba
-			2. Tổ chức thi thiết kế “Cắm hoa nghệ thuật” (Có thể lệ kèm theo)
-			- Thời gian: 8h, ngày 18/11/2016 (thứ sáu)
-			- Địa điểm: Trung tâm thư viện tầng 2, nhà A11
-			- Nội dung: Thi theo hình thức nhóm (3-5 người/lớp) sẽ thi thiết kế cắm hoa nghệ thuật bằng giấy hoặc những vật liệu được tái chế lại,… trong khoảng thời gian 45 phút
-			3. Chương trình" Tình thầy trò" 
-			- Thời gian: 14h ngày 18/11/2016
-			- Địa điểm: Hội trường tầng 3 nhà A11
-			- Các bạn Đoàn viên đăng ký tham gia với cán bộ lớp, lớp trưởng đến hết ngày 4/11 và liên hệ đ/c Nguyễn Linh Nhi – UVCH Liên chi Hội khoa CNTT - SĐT: 01663.605.638 
-			- LƯU Ý: Các bạn Đoàn viên tham gia chương trình và thi đấu tất cả đều mặc áo Đồng phục Khoa.
+		<?php
+		$id = $_GET['id'];
+		include("config.php");
+		$query = "SELECT * FROM `tintuc` WHERE id='$id'";
+		$result = mysqli_query($conn,$query);
+		while ($row = mysqli_fetch_array($result)) {
+			# code...
+		?>
+			<span class="News-Title"><p><?php echo $row['tieude']; ?></p></span>
+			<span class="Timepost"><p><?php echo $row['ngaydang']; ?></p></span>
+			<span class="News-Firt"><?php echo $row['caudaunoidung']; ?></span>
+			<span class="News-Images"><img src="<?php echo $row['hinhanh']; ?>"></span>
+			<span class="News-Content"><?php echo $row['noidung']; ?></span>
+			<span class="News-Footer">
+				<p>Người đăng: <?php echo $row['nguoidang']; ?></p>
 			</span>
-			<span class="News-Footer">Người đăng: Hoàng Cường</span>
+			<?php 
+				}
+			?>
 	</div>
 	<div id="Sidebar">
 		<div class="Title-Sidebar"><label><a href="">Tin tức mới nhất</a></label></div>
